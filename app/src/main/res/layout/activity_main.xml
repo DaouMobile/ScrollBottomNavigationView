@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="mainViewPagerAdapter"
+            type="androidx.viewpager2.adapter.FragmentStateAdapter" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            canSwipe="@{false}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pageAdapter="@{mainViewPagerAdapter}" />
+
+        <com.daou.lib.ScrollBottomNavigation
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            app:fixed_menu_icon="@drawable/ic_menu_normal"
+            app:fixed_menu_icon_active="@drawable/ic_cancel"
+            app:fixed_menu_title="@string/label_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:maxItemCountInLarge="@{8}"
+            app:maxItemCountInSmall="@{6}"
+            app:title_text_color="@color/gray_3"
+            app:title_text_color_active="@color/gray_3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

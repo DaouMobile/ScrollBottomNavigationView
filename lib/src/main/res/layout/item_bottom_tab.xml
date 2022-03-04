@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.daou.lib.model.BottomTabItem" />
+
+        <variable
+            name="onClickTab"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="tabViewDesignModel"
+            type="com.daou.lib.model.TabViewDesignModel" />
+
+        <import type="android.view.View" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:onClick="@{onClickTab}">
+
+        <ImageView
+            android:id="@+id/icon_view"
+            ImageResource="@{item.iconRes}"
+            isClicked="@{item.clicked}"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="12dp"
+            android:visibility="@{item.dormant ? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_disable"
+            android:layout_width="40dp"
+            android:layout_height="22dp"
+            android:background="@drawable/dormant_menu_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingHorizontal="2dp"
+            android:singleLine="true"
+            android:text="@string/label_account_disable"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            android:visibility="@{item.dormant ? View.VISIBLE : View.INVISIBLE}"
+            app:layout_constraintBottom_toBottomOf="@id/icon_view"
+            app:layout_constraintEnd_toEndOf="@id/icon_view"
+            app:layout_constraintStart_toStartOf="@id/icon_view"
+            app:layout_constraintTop_toTopOf="@id/icon_view" />
+
+        <TextView
+            android:id="@+id/item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{item.text}"
+            android:textColor="@{tabViewDesignModel.defaultTitleColor}"
+            android:textSize="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_view"
+            app:layout_constraintVertical_bias="0"
+            tools:text="Sample" />
+
+        <TextView
+            android:id="@+id/badge"
+            badgeContent="@{item.badgeContent}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:minWidth="17dp"
+            android:textColor="#ffffff"
+            android:textSize="13dp"
+            android:visibility="@{item.dormant ? View.INVISIBLE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="10" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

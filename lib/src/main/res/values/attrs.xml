@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollBottomNavigation">
+        <attr name="title_text_color" format="color|reference" />
+        <attr name="title_text_color_active" format="color|reference" />
+        <attr name="badge_content_color" format="color|reference" />
+        <attr name="fixed_menu_icon" format="reference" />
+        <attr name="fixed_menu_icon_active" format="reference" />
+        <attr name="fixed_menu_title" format="string|reference" />
+    </declare-styleable>
+</resources>
