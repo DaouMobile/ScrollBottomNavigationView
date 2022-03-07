@@ -1,6 +1,8 @@
 # ScrollBottomNavigation
 Android Custom View for Scrollable BottomNavigationView
 
+![](example.jpg)
+
 ## Setup
 
 ### Gradle
