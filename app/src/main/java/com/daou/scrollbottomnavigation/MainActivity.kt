@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
-import com.daou.lib.hide
-import com.daou.lib.model.*
-import com.daou.lib.show
+import com.daou.lib.model.BottomTabItem
+import com.daou.lib.model.HOME
+import com.daou.lib.model.NOTIFICATION
+import com.daou.lib.model.WEB
 import com.daou.scrollbottomnavigation.databinding.ActivityMainBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 

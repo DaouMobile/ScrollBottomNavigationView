@@ -1,4 +1,4 @@
-package com.daou.lib
+package com.daou.scrollbottomnavigation
 
 import android.view.View
 import com.google.android.material.bottomsheet.BottomSheetBehavior
