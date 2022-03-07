@@ -65,3 +65,15 @@ fun ViewPager2.setPageAdapter(fragmentStateAdapter: FragmentStateAdapter, canSwi
     adapter = fragmentStateAdapter
     isUserInputEnabled = canSwipe
 }
+
+@BindingAdapter("maxItemCountInSmall", "maxItemCountInLarge")
+fun ScrollBottomNavigation.setMaxVisibleItemCount(
+    maxItemCountInSmall: Int,
+    maxItemCountInLarge: Int
+) {
+    if (context.deviceWidth >= 2000) {
+        setMaxVisibleItemCount(maxItemCountInLarge)
+    } else {
+        setMaxVisibleItemCount(maxItemCountInSmall)
+    }
+}

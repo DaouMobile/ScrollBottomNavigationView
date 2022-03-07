@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <import type="android.view.View" />
 
         <variable
@@ -10,9 +12,10 @@
             type="androidx.viewpager2.adapter.FragmentStateAdapter" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/gray_3"
         tools:context=".MainActivity">
 
         <androidx.viewpager2.widget.ViewPager2
@@ -23,6 +26,33 @@
             app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
             app:layout_constraintTop_toTopOf="parent"
             app:pageAdapter="@{mainViewPagerAdapter}" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_slide_menu_wrap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="0dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rl_bottom_sheet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="48dp"
+                    android:background="@drawable/shp_slide_menu"
+                    android:paddingBottom="?android:attr/actionBarSize"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <com.daou.lib.ScrollBottomNavigation
             android:id="@+id/bottom_nav"
