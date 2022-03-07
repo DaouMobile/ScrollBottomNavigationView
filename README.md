@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.DaouMobile:ScrollBottomNavigationView:1.0.0'
+	implementation 'com.github.DaouMobile.ScrollBottomNavigationView:final:1.0.0'
 }
 
 ```
