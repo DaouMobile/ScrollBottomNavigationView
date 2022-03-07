@@ -1,7 +1,7 @@
 # ScrollBottomNavigation
 Android Custom View for Scrollable BottomNavigationView
 
-![](example.jpg =x250)
+![](example.jpg){: width="200"}
 
 ## Setup
 
