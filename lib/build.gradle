@@ -53,7 +53,7 @@ afterEvaluate {
                 from components.release
 
                 groupId = 'com.daou.lib'
-                artifactId = 'ScrollBottomNav'
+                artifactId = 'final'
                 version = '1.0'
             }
         }
