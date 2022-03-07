@@ -52,8 +52,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
 
-                groupId = 'com.daou.library'
-                artifactId = 'final'
+                groupId = 'com.daou.lib'
+                artifactId = 'ScrollBottomNav'
                 version = '1.0'
             }
         }
