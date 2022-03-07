@@ -3,6 +3,7 @@ package com.daou.lib
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import androidx.annotation.DrawableRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -131,6 +132,10 @@ class ScrollBottomNavigation @JvmOverloads constructor(
 
     fun setOnNavigationItemSelectedListener(onClick: (BottomTabItem) -> Unit) {
         bottomTabListAdapter.setOnClickTab(onClick)
+    }
+
+    fun removeFixedIcon() {
+       binding.fixedMenu.root.visibility = View.GONE
     }
 
     private fun updateArrowIconVisibility(layoutManager: LinearLayoutManager) {
