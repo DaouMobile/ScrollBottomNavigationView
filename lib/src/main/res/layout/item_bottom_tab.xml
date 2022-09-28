@@ -33,7 +33,7 @@
             isClicked="@{item.clicked}"
             android:layout_width="wrap_content"
             android:layout_height="24dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="6dp"
             android:visibility="@{item.dormant ? View.INVISIBLE : View.VISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,20 +59,21 @@
 
         <TextView
             android:id="@+id/item_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@{item.text}"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:paddingHorizontal="5dp"
+            android:gravity="center_horizontal"
+            android:text="@{item.text + `test test test`}"
             android:textColor="@{tabViewDesignModel.defaultTitleColor}"
             android:textSize="10dp"
-            android:singleLine="true"
-            android:ellipsize="end"
+            android:maxLines="2"
+            android:lineSpacingExtra="-1dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/icon_view"
             app:layout_constraintVertical_bias="0"
-            tools:text="Sample" />
+            tools:text="Sample\nsample" />
 
         <TextView
             android:id="@+id/badge"
