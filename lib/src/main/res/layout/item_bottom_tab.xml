@@ -63,7 +63,7 @@
             android:layout_height="24dp"
             android:paddingHorizontal="5dp"
             android:gravity="center_horizontal"
-            android:text="@{item.text + `test test test`}"
+            android:text="@{item.text}"
             android:textColor="@{tabViewDesignModel.defaultTitleColor}"
             android:textSize="10dp"
             android:maxLines="2"
