@@ -7,7 +7,7 @@ Android Custom View for Scrollable BottomNavigationView
 
 ### Gradle
 [![JitPack](https://jitpack.io/v/DaouMobile/ScrollBottomNavigationView.svg)](https://jitpack.io/#DaouMobile/ScrollBottomNavigationView)
-
+-
 ```gradle
 
 repositories {
